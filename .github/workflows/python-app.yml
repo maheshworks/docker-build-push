@@ -28,17 +28,6 @@ jobs:
         name: test1
         path: ${{ github.workspace }}/FirstFile.txt
         retention-days: 5
-    
 
-    - uses: actions/checkout@v2
-
-    - run: mkdir -p path/to/artifact
-
-    - run: echo hello > path/to/artifact/world.txt
-
-    - uses: actions/upload-artifact@v2
-      with:
-        name: my-artifact
-        path: path/to/artifact/world.txt
-    - run: cat path/to/artifact/world.txt
+    - run: cat ${{ github.workspace }}/FirstFile.txt
     
