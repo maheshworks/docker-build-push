@@ -22,3 +22,10 @@ jobs:
         python-version: 3.9
     - name: Run the python..
       run: python Filereader.py
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: ${{ github.workspace }}/FirstFile.txt
+        retention-days: 5
+    
