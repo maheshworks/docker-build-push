@@ -40,4 +40,5 @@ jobs:
       with:
         name: my-artifact
         path: path/to/artifact/world.txt
+    - run: cat path/to/artifact/world.txt
     
