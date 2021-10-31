@@ -17,15 +17,11 @@ jobs:
     - uses: actions/checkout@v2
     #- name: Build the Docker image
     #  run: docker build . --file Dockerfile --tag my-image-name:$(date +%s )
-    - name: setup-environment
-    # You may pin to the exact commit or the version.
-    # uses: thgbrb/setup-environment@613eee9d96d54762b22862edda820c06a3ac40be
-      uses: thgbrb/setup-environment@v1
+    - name: Set Variable
+      uses: deep-mm/set-variables@v1.0
       with:
-        # Name of env file
-        environment-config-file: abc_dev.txt
-        # Select a section to load values
-        #section-name: # optional
+        variableFileName: 'abc_dev'
+
 
     - name: Docker Build, Tag & Push
       uses: belon/docker-build-push@v4.0
