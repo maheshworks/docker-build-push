@@ -1,0 +1,39 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: Docker Build, Tag & Push
+      uses: belon/docker-build-push@v4.0
+      with:
+        # Name of the Docker image
+        image: 
+        # Tags override for Docker image
+        tags: v1
+        # Target Docker registry
+        registry: mbabu00 
+        # Location of Dockerfile, if not Dockerfile in root directory
+        dockerfile: Dockerfile
+        # Directory to run `docker build` from, if not project root
+        #directory: 
+        # Docker build arguments in format KEY=VALUE,KEY=VALUE
+        #buildArgs: 
+        # Docker registry username
+        username: mbabu00
+        # Docker registry password
+        password: Docker123$
+        # GitHub organization to push image to (if not current)
+        #gitHubOrg:
