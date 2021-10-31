@@ -36,3 +36,13 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         # GitHub organization to push image to (if not current  )
         gitHubOrg: maheshworks
+   
+    - name: run the action
+      id: hello
+      uses: ./
+      with:
+        myInput: 'Chad'
+    - name: output the memory
+      run: |
+        echo ${{ steps.hello.outputs.memory }}
+        echo "total memory successfully output"
