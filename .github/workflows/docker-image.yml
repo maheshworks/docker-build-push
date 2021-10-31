@@ -20,11 +20,11 @@ jobs:
       uses: belon/docker-build-push@v4.0
       with:
         # Name of the Docker image
-        image: test1
+        image: test1/image
         # Tags override for Docker image
-        tags: v1
+        tags: v1, latest
         # Target Docker registry
-        registry: mbabu00 
+        registry: mbabu00/samplemaven1
         # Location of Dockerfile, if not Dockerfile in root directory
         dockerfile: Dockerfile
         # Directory to run `docker build` from, if not project root
