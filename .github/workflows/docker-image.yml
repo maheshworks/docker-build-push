@@ -26,20 +26,12 @@ jobs:
         environment-config-file: abc_dev.txt
         # Select a section to load values
         #section-name: # optional
-    - name: run the action
-      id: hello
-      uses: ./
-      with:
-        myInput: 'Chad'
-    - name: output the memory
-      run: |
-        echo ${{ steps.hello.outputs.memory }}
-        echo "total memory successfully output"
+
     - name: Docker Build, Tag & Push
       uses: belon/docker-build-push@v4.0
       with:
         # Name of the Docker image
-        image: mbabu00/samplemaven1
+        image: mbabu00/{{ repo }}
         # Tags override for Docker image 
         tags: v1
         # Target Docker registry
