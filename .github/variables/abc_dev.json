@@ -1,0 +1,12 @@
+{
+  "variables": [
+    {
+      "name": "repo",
+      "value": "samplemaven1"
+    },
+    {
+      "name": "variable2",
+      "value": "variable2value"
+    }
+  ]
+}
