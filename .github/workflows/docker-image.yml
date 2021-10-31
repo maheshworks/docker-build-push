@@ -20,7 +20,7 @@ jobs:
       uses: belon/docker-build-push@v4.0
       with:
         # Name of the Docker image
-        image: 
+        image: test1
         # Tags override for Docker image
         tags: v1
         # Target Docker registry
@@ -36,4 +36,4 @@ jobs:
         # Docker registry password
         password: Docker123$
         # GitHub organization to push image to (if not current)
-        #gitHubOrg:
+        gitHubOrg: maheshworks
