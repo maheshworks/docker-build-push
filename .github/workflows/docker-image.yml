@@ -24,7 +24,7 @@ jobs:
         # Tags override for Docker image
         tags: v1
         # Target Docker registry
-        registry: docker.io
+        registry: docker.io/mbabu00
         # Location of Dockerfile, if not Dockerfile in root directory
         dockerfile: Dockerfile
         # Directory to run `docker build` from, if not project root
