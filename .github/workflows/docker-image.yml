@@ -32,8 +32,7 @@ jobs:
         # Docker build arguments in format KEY=VALUE,KEY=VALUE
         #buildArgs: 
         # Docker registry username
-        username: mbabu00
-        # Docker registry password
-        password: Docker123$
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
         # GitHub organization to push image to (if not current)
         gitHubOrg: maheshworks
