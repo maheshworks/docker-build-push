@@ -20,7 +20,7 @@ jobs:
       uses: belon/docker-build-push@v4.0
       with:
         # Name of the Docker image
-        image: test1/image
+        image: samplemaven1
         # Tags override for Docker image
         tags: v1, latest
         # Target Docker registry
