@@ -27,7 +27,7 @@ jobs:
       uses: belon/docker-build-push@v4.0
       with:
         # Name of the Docker image
-        image: mbabu00/{{ repo }}
+        image: mbabu00/${{ env.repo }}
         # Tags override for Docker image 
         tags: v1
         # Target Docker registry
