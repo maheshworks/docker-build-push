@@ -24,7 +24,7 @@ jobs:
         # Tags override for Docker image
         tags: v1, latest
         # Target Docker registry
-        registry: mbabu00/samplemaven1
+        registry: docker.io
         # Location of Dockerfile, if not Dockerfile in root directory
         dockerfile: Dockerfile
         # Directory to run `docker build` from, if not project root
