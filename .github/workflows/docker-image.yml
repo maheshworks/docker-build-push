@@ -34,5 +34,5 @@ jobs:
         # Docker registry username
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
-        # GitHub organization to push image to (if not current )
+        # GitHub organization to push image to (if not current  )
         gitHubOrg: maheshworks
